@@ -3,15 +3,15 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-bui
 
 DATE = $(shell vendor/aokp/tools/getdate)
 
-ifneq ($(AOKP_BUILD),)
-    # AOKP_BUILD=<goo version int>/<build string>
+ifneq ($(AOKPUB_BUILD),)
+    # AOKPUB_BUILD=<goo version int>/<build string>
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.developerid=shiznu \
         ro.goo.rom=aokpub \
         ro.goo.version=$(shell echo $(AOKPUB_BUILD) | cut -d/ -f1) \
         ro.aokpub.version=$(TARGET_PRODUCT)_jb-mr1_$(shell echo $(AOKPUB_BUILD) | cut -d/ -f2)
 else
-    ifneq ($(UBAOKP_NIGHTLY),)
+  ifneq ($(AOKPUB_NIGHTLY),)
         # AOKP_NIGHTLY=true
         PRODUCT_PROPERTY_OVERRIDES += \
             ro.aokpub.version=$(TARGET_PRODUCT)_nightly_$(DATE)
