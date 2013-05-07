@@ -6,18 +6,18 @@ DATE = $(shell vendor/aokp/tools/getdate)
 ifneq ($(AOKP_BUILD),)
     # AOKP_BUILD=<goo version int>/<build string>
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.developerid=aokp \
-        ro.goo.rom=aokp \
-        ro.goo.version=$(shell echo $(AOKP_BUILD) | cut -d/ -f1) \
-        ro.aokp.version=$(TARGET_PRODUCT)_jb-mr1_$(shell echo $(AOKP_BUILD) | cut -d/ -f2)
+        ro.goo.developerid=shiznu \
+        ro.goo.rom=aokpub \
+        ro.goo.version=$(shell echo $(AOKPUB_BUILD) | cut -d/ -f1) \
+        ro.aokpub.version=$(TARGET_PRODUCT)_jb-mr1_$(shell echo $(AOKPUB_BUILD) | cut -d/ -f2)
 else
-    ifneq ($(AOKP_NIGHTLY),)
+    ifneq ($(UBAOKP_NIGHTLY),)
         # AOKP_NIGHTLY=true
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.aokp.version=$(TARGET_PRODUCT)_nightly_$(DATE)
+            ro.aokpub.version=$(TARGET_PRODUCT)_nightly_$(DATE)
     else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.aokp.version=$(TARGET_PRODUCT)_unofficial_$(DATE)
+        ro.aokpub.version=$(TARGET_PRODUCT)_unofficial_$(DATE)
     endif
 endif
 
