@@ -2,13 +2,13 @@
 $(call inherit-product, device/samsung/toro/full_toro.mk)
 
 # Inherit AOKP common bits
-$(call inherit-product, vendor/aokp/configs/common.mk)
+$(call inherit-product, vendor/aokpub/configs/common.mk)
 
 # Inherit common Verizon Wireless Files
-$(call inherit-product, vendor/aokp/configs/vzw.mk)
+$(call inherit-product, vendor/aokpub/configs/vzw.mk)
 
 # Tuna Overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/tuna
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokpub/overlay/tuna
 
 # Setup device specific product configuration.
 PRODUCT_NAME := aokpub_toro
