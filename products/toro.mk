@@ -11,7 +11,7 @@ $(call inherit-product, vendor/aokp/configs/vzw.mk)
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/tuna
 
 # Setup device specific product configuration.
-PRODUCT_NAME := aokp_toro
+PRODUCT_NAME := aokpub_toro
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := toro
 PRODUCT_MODEL := Galaxy Nexus
