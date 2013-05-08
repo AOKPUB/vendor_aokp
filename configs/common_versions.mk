@@ -12,7 +12,7 @@ ifneq ($(AOKPUB_BUILD),)
         ro.aokpub.version=$(TARGET_PRODUCT)_jb-mr1_$(shell echo $(AOKPUB_BUILD) | cut -d/ -f2)
 else
   ifneq ($(AOKPUB_NIGHTLY),)
-        # AOKP_NIGHTLY=true
+        # AOKPUB_NIGHTLY=true
         PRODUCT_PROPERTY_OVERRIDES += \
             ro.aokpub.version=$(TARGET_PRODUCT)_nightly_$(DATE)
     else
