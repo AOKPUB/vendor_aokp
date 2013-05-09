@@ -1,7 +1,6 @@
 #Permissions and Lib for Verizon Wireless Apps
 PRODUCT_PACKAGES += \
-    VerizonSSO \
-    CellBroadcastReceiver
+    VerizonSSO 
 
 PRODUCT_COPY_FILES += \
     vendor/aokpub/prebuilt/vzw/etc/permissions/com.vzw.hardware.ehrpd.xml:system/etc/permissions/com.vzw.hardware.ehrpd.xml \
