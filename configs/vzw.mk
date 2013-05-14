@@ -2,7 +2,6 @@
 PRODUCT_PACKAGES += \
     VerizonSSO \
     CellBroadcastReceiver
-=======
    
 PRODUCT_COPY_FILES += \
     vendor/aokpub/prebuilt/vzw/etc/permissions/com.vzw.hardware.ehrpd.xml:system/etc/permissions/com.vzw.hardware.ehrpd.xml \
