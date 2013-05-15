@@ -8,7 +8,7 @@ ifneq ($(AOKPUB_BUILD),)
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.developerid=shiznu \
         ro.goo.rom=AOKPUB \
-        ro.goo.version=$(shell date $(AOKPUB_BUILD) | cut -d/ -f1) \
+        ro.goo.version=$(shell echo $(AOKPUB_BUILD) | cut -d/ -f1) \
         ro.AOKOPUB.version=$(TARGET_PRODUCT)_jb-mr1_$(shell echo $(AOKPUB_BUILD) | cut -d/ -f2)
 else
   ifneq ($(AOKPUB_NIGHTLY),)
