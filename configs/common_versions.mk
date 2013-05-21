@@ -9,7 +9,7 @@ ifneq ($(AOKPUB_BUILD),)
         ro.goo.developerid=shiznu \
         ro.goo.rom=AOKPUB \
         ro.goo.version=$(shell echo $(AOKPUB_BUILD) | cut -d/ -f1) \
-        ro.AOKOPUB.version=$(TARGET_PRODUCT)_jb-mr1_$(shell echo $(AOKPUB_BUILD) | cut -d/ -f2)
+        ro.AOKPUB.version=$(TARGET_PRODUCT)_jb-mr1_$(shell echo $(AOKPUB_BUILD) | cut -d/ -f2)
 else
   ifneq ($(AOKPUB_NIGHTLY),)
         # AOKPUB_NIGHTLY=true
